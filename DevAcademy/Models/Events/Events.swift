@@ -1,0 +1,244 @@
+import Foundation
+
+struct Events {
+    var events: [Event]
+    
+    enum CodingKeys: String, CodingKey {
+        case events = "features"
+    }
+}
+
+extension Events {
+    static let mock: Events = Events(
+        events: [
+            Event(
+                attributes: EventAttributes(
+                    categories: nil, 
+                    id: 207276,
+                    name: "Člověk, smrtelná osobnost a nesmrtelné jádro",
+                    text: "Srdečně zveme veřejnost na přednášku.Zkoumání cesty sebeobjevení.Transformace vědomí.Příběh o obyvateli nesmrtelného domu – na motivy knihy Jan Naposlednarozený.Jan Naposlednarozený je příběh jednoho mladého muže, který zdědil venkovský statek, k němuž se váže zvláštní příkaz. Ten je následující:Změň dům podle původního plánu znění,prostorům všem je třeba obnovení.Na první pohled to vypadá jako jednoduchý úkol, avšak když se Jan plný elánu do toho pustí, nemá ještě nejmenší tušení, jaké dalekosáhlé následky to bude mít.Jan Naposlednarozený je symbolické vyprávění a rovněž jméno je symbolický vzor. Ale může to být příběh každého, kdo je odhodlán a připraven od základu opravit a obnovit svůj život a zaměřit se na siločáry toho Jediného Světla.",
+                    tickets: "Zdarma - ",
+                    ticketsInfo: nil,
+                    image: URL(string: "https://www.gotobrno.cz/wp-content/uploads/2017/07/brno-panorama.jpg"),
+                    url: "https://www.gotobrno.cz/akce/clovek-smrtelna-osobnost-a-nesmrtelne-jadro/",
+                    email: "kancelar.rosicrucianum@gmail.com",
+                    ticketsUrl: nil,
+                    timeStampFrom: 1698796800000,
+                    timeStampTo: 1698796800000),
+                geometry:
+                    EventPoint(
+                        latitude: 49.19395161949479,
+                        longitude: 16.612533945669817)
+            ),
+            Event(
+                attributes: EventAttributes(
+                    categories: "Akce TIC Brno, Veletrhy / vzdělávací",
+                    id: 183027,
+                    name: "Prohlídky Brna pro školy – V interiéru",
+                    text: nil,
+                    tickets: nil,
+                    ticketsInfo: nil,
+                    image: URL(string: "https://picsum.photos/200"),
+                    url: "https://www.gotobrno.cz/akce/prohlidky-brna-pro-skoly-v-interieru/",
+                    email: "skolniprohlidky@ticbrno.cz",
+                    ticketsUrl: nil,
+                    timeStampFrom: 1609459200000,
+                    timeStampTo: 2556057600000),
+                geometry:
+                    EventPoint(
+                        latitude: 49.19505099999999,
+                        longitude: 16.608123)
+            ),
+            Event(
+                attributes: EventAttributes(
+                    categories: "Akce TIC Brno, Veletrhy / vzdělávací",
+                    id: 182804,
+                    name: "Prohlídky Brna pro školy – Naše klasika",
+                    text: nil,
+                    tickets: nil,
+                    ticketsInfo: nil,
+                    image: URL(string: "https://picsum.photos/200"),
+                    url: "https://www.gotobrno.cz/akce/prohlidky-brna-pro-skoly-nase-klasika/",
+                    email: "skolniprohlidky@ticbrno.cz",
+                    ticketsUrl: nil,
+                    timeStampFrom: 1609459200000,
+                    timeStampTo: 2556057600000),
+                geometry:
+                    EventPoint(
+                        latitude: 49.19505099999999,
+                        longitude: 16.608123)
+            ),
+            Event(
+                attributes: EventAttributes(
+                    categories: "Akce TIC Brno, Veletrhy / vzdělávací",
+                    id: 182796,
+                    name: "Prohlídky Brna pro školy",
+                    text: nil,
+                    tickets: nil,
+                    ticketsInfo: nil,
+                    image: URL(string: "https://picsum.photos/200"),
+                    url: "https://www.gotobrno.cz/akce/pruvodcovske-sluzby-prohlidky-brna-pro-skoly/",
+                    email: "skolniprohlidky@ticbrno.cz",
+                    ticketsUrl: nil,
+                    timeStampFrom: 1609459200000,
+                    timeStampTo: 2556057600000),
+                geometry:
+                    EventPoint(
+                        latitude: 49.19505099999999,
+                        longitude: 16.608123)
+            ),
+            Event(
+                attributes: EventAttributes(
+                    categories: nil,
+                    id: 101497,
+                    name: "Průvodcovské služby – Tematické okruhy",
+                    text: nil,
+                    tickets: nil,
+                    ticketsInfo: nil,
+                    image: URL(string: "https://picsum.photos/200"),
+                    url: "https://www.gotobrno.cz/akce/pruvodcovske-sluzby-tematicke-okruhy/",
+                    email: "pecinkova@ticbrno.cz",
+                    ticketsUrl: nil,
+                    timeStampFrom: 1609459200000,
+                    timeStampTo: 2556057600000),
+                geometry:
+                    EventPoint(
+                        latitude: 49.19505099999999,
+                        longitude: 16.608123)
+            ),
+            Event(
+                attributes: EventAttributes(
+                    categories: "Akce TIC Brno, Veletrhy / vzdělávací",
+                    id: 183031,
+                    name: "Prohlídky Brna pro školy – Další nabídka",
+                    text: nil,
+                    tickets: nil,
+                    ticketsInfo: nil,
+                    image: URL(string: "https://picsum.photos/200"),
+                    url: "https://www.gotobrno.cz/akce/prohlidky-brna-pro-skoly-dalsi-nabidka/",
+                    email: "skolniprohlidky@ticbrno.cz",
+                    ticketsUrl: nil,
+                    timeStampFrom: 1609459200000,
+                    timeStampTo: 2556057600000),
+                geometry:
+                    EventPoint(
+                        latitude: 49.19505099999999,
+                        longitude: 16.608123)
+            ),
+            Event(
+                attributes: EventAttributes(
+                    categories: "Akce TIC Brno, Veletrhy / vzdělávací",
+                    id: 105889,
+                    name: "Průvodcovské služby na objednávku",
+                    text: nil,
+                    tickets: nil,
+                    ticketsInfo: nil,
+                    image: URL(string: "https://picsum.photos/200"),
+                    url: "https://www.gotobrno.cz/akce/pruvodcovske-sluzby-na-objednavku/",
+                    email: "pecinkova@ticbrno.cz",
+                    ticketsUrl: nil,
+                    timeStampFrom: 1609459200000,
+                    timeStampTo: 2556057600000),
+                geometry:
+                    EventPoint(
+                        latitude: 49.19505099999999,
+                        longitude: 16.608123)
+            ),
+            Event(
+                attributes: EventAttributes(
+                    categories: "Akce TIC Brno",
+                    id: 101444,
+                    name: "Poznávejte město s průvodcem",
+                    text: "Autentické prohlídky",
+                    tickets: nil,
+                    ticketsInfo: nil,
+                    image: URL(string: "https://picsum.photos/200"),
+                    url: "https://www.gotobrno.cz/akce/poznavejte-mesto-s-pruvodcem/",
+                    email: "info@ticbrno.cz",
+                    ticketsUrl: nil,
+                    timeStampFrom: 1609459200000,
+                    timeStampTo: 2556057600000),
+                geometry:
+                    EventPoint(
+                        latitude: 49.19505099999999,
+                        longitude: 16.608123)
+            ),
+            Event(
+                attributes: EventAttributes(
+                    categories: "Akce TIC Brno, Pro rodiny, Veletrhy / vzdělávací",
+                    id: 105725,
+                    name: "Autentické prohlídky",
+                    text: nil,
+                    tickets: nil,
+                    ticketsInfo: nil,
+                    image: URL(string: "https://picsum.photos/200"),
+                    url: "https://www.gotobrno.cz/akce/pruvodcovske-sluzby-autenticke-prohlidky/",
+                    email: "uricarova@ticbrno.cz",
+                    ticketsUrl: nil,
+                    timeStampFrom: 1609459200000,
+                    timeStampTo: 2556057600000),
+                geometry:
+                    EventPoint(
+                        latitude: 49.19505099999999,
+                        longitude: 16.608123)
+            ),
+            Event(
+                attributes: EventAttributes(
+                    categories: "Akce TIC Brno, Veletrhy / vzdělávací",
+                    id: 183022,
+                    name: "Prohlídky Brna pro školy – Speciální prohlídky",
+                    text: nil,
+                    tickets: nil,
+                    ticketsInfo: nil,
+                    image: URL(string: "https://picsum.photos/200"),
+                    url: "https://www.gotobrno.cz/akce/prohlidky-brna-pro-skoly-specialni-prohlidky/",
+                    email: "uricarova@ticbrno.cz",
+                    ticketsUrl: nil,
+                    timeStampFrom: 1609459200000,
+                    timeStampTo: 2556057600000),
+                geometry:
+                    EventPoint(
+                        latitude: 49.19505099999999,
+                        longitude: 16.608123)
+            ),
+            Event(
+                attributes: EventAttributes(
+                    categories: "Folklor, Hudba",
+                    id: 204511,
+                    name: "Co Javorník, to muzikant",
+                    text: "Jedinečný koncert souboru Javorník Brno a&nbsp;jeho tří současných muzik, zpěváků i&nbsp;malých tanečních forem.Spoluúčinkují Jindřich Hovorka ml., Petr Ryšavý, Magdalena Říčná, Ludvík Běťák, Michaela Šilhavíková, Jaroslav Píštěk, ženský i&nbsp;mužský sbor souboru a&nbsp;další. Samotný koncert bude nejen o&nbsp;hudebním projevu, ale bude také prokládaný malými tanečními formami tanečníků z&nbsp;FS Javorník.",
+                    tickets: "Dospělí - 350Kč",
+                    ticketsInfo: "Jednotná cena za místenku.",
+                    image: URL(string: "https://picsum.photos/200"),
+                    url: "https://www.gotobrno.cz/akce/co-javornik-to-muzikant-2/",
+                    email: "info@javornikbrno.cz",
+                    ticketsUrl: "https://goout.net/cs/listky/javornik/vhbt/",
+                    timeStampFrom: 1623974400000,
+                    timeStampTo: 1861920000000),
+                geometry:
+                    EventPoint(
+                        latitude: 49.2095699547947,
+                        longitude: 16.5888674968201)
+            ),
+            Event(
+                attributes: EventAttributes(
+                    categories: "Akce TIC Brno, Veletrhy / vzdělávací",
+                    id: 101490,
+                    name: "Průvodcovské služby – Základní okruhy",
+                    text: "Základní okruhy vás během jedné procházky seznámí se všemi hlavními památkami či místy v centru města, a to v mnoha světových jazycích. Ve spolupráci s průvodci, kteří jsou členy Asociace průvodců ČR, nabízíme 2 nebo 3hodinovou základní trasu.Vybírat můžete z 2hodinových okruhů Poprvé v Brně a Brněnské pověsti a zajímavosti nebo z okruhů 3hodinových To NEJ z Brna a Brno z širšího pohledu.Poprvé v Brně / 2 hodinyBěhem této prohlídky vás průvodce seznámí s hlavními památkami v centru města. Můžete tak obdivovat pozoruhodná brněnská náměstí, prohlédnout si monumentální katedrálu sv. Petra a Pavla nebo si vyslechnout nejznámější brněnské pověsti.Trasa:Stará radnice – nádvoří, brněnský drak, portálZelný trh – barokní kašna Parnas, Divadlo Reduta, socha W. A. Mozarta, sloup Nejsvětější trojice, Dietrichsteinský palácKapucínské náměstíKatedrála sv. Petra a Pavla (včetně interiéru)Denisovy sady – obelisk, výhled na Špilberk, Staré Brno a kostel J. A. Komenského (Červený kostel)Náměstí Svobody – Kleinův palác, Dům pánů z Lipé, budova Moravské banky, morový sloup, hodinový strojKostel sv. Jakuba (včetně interiéru)Moravské náměstí – kostel sv. Tomáše, Místodržitelský palác, sochy 4 Platónových ctnostíBěhem této trasy se nevstupuje do objektů, není-li uvedeno jinak.Detail trasyBrněnské pověsti a zajímavosti / 2 hodinyTuto prohlídku historického centra doporučujeme všem zájemcům o mystiku, legendy a pověsti. Na trase se seznámíte se známými i méně známými brněnskými pověstmi. Pomůžeme vám také objevit drobnosti a zajímavosti, kterých si při běžném procházení ulicemi nevšimnete.Trasa:Stará radnice – nádvoří, brněnský drak, portálOrlí ulice – Dům u kamenné pannyKapucínské náměstí – Kapucínská hrobka, kostel Nalezení svatého KřížeZelný trh – barokní kašna Parnas, Divadlo Reduta, socha W. A. Mozarta, sloup Nejsvětější trojice, Dietrichsteinský palácKatedrála sv. Petra a Pavla (včetně interiéru)Denisovy sady – obelisk, výhled na Špilberk, Staré Brno a kostel J. A. Komenského (Červený kostel)Mečová uliceDominikánské náměstí – Nová radniceNáměstí Svobody – Kleinův palác, Dům pánů z Lipé, hodinový strojKostel sv. Jakuba (včetně interiéru)Moravské náměstí – sochy 4 Platónových ctnostíBěhem této trasy se nevstupuje do objektů, není-li uvedeno jinak.Detail trasyTo NEJ z centra Brna / 3 hodinyBěhem této prohlídky poznáte nejen centrum města, ale také mohutný hrad Špilberk tyčící se na kopci nad Brnem jako pomník dávné vojenské slávy či připomínka těžkého žalářnictví. Hrad navíc nabízí skvělý výhled na celé město i na nejvyšší budovu v Brně. Poznáte tak nejlépe Brno historické i současné. Na Špilberku sídlí Muzeum města Brna. Návštěva expozic není součástí prohlídky.Trasa:Stará radnice – nádvoří, brněnský drak, portálZelný trh – barokní kašna Parnas, Divadlo Reduta, socha W. A. Mozarta, sloup Nejsvětější trojice, Dietrichsteinský palácKatedrála sv. Petra a Pavla (včetně interiéru)Kapucínské náměstíNáměstí Svobody – Kleinův palác, Dům pánů z Lipé, budova Moravské banky, morový sloup, hodinový strojKostel sv. Jakuba (včetně interiéru)Moravské náměstí – kostel sv. Tomáše, Místodržitelský palác, sochy 4 Platónových ctnostíHrad Špilberk – busta Raduita de Souches, velké nádvoří, vyhlídková místaBěhem této trasy se nevstupuje do objektů, není-li uvedeno jinak.Detail trasyBrno z širšího pohledu / 3 hodinySkupinám s vlastním autobusem doporučujeme tuto kombinovanou prohlídku. Procházka v pěší zóně v centru města je doplněna okružní jízdou kolem míst, která stojí za to turistům také ukázat (např. park Lužánky, vila Löw-Beer, bazilika Nanebevzetí Panny Marie, Mendelovo muzeum, Pivovar Starobrno, brněnské výstaviště atd.)Během této trasy se nevstupuje do objektů, není-li uvedeno jinak.Trasy lze změnit dle požadavků klienta.CENÍK V ČESKÉM JAZYCEPočet osobDélka 2 hodinyDélka 3 hodinyskupina do 4 osob1000 Kč1400 Kčskupina 5-14 osob1400 Kč1800 Kčskupina 15-24 osob1800 Kč2300 Kčskupina 25-45 osob2300 Kč2900 KčUvedené ceny jsou za celou skupinu a neobsahují vstupné do objektů.CENÍK V CIZÍM JAZYCEPočet osobDélka 2 hodinyDélka 3 hodinyskupina do 4 osob1300 CZK / 52 EUR1800 CZK / 72 EURskupina 5-14 osob1800 CZK / 72 EUR2300 CZK / 92 EURskupina 15-24 osob2300 CZK / 92 EUR2900 CZK / 116 EURskupina 25-45 osob2900 CZK / 116 EUR3900 CZK / 156 EURStorno poplatky:den před objednaným termínem 50 % z cenyv den konání prohlídky 100 % z cenyVýklad zajistíme v těchto jazycích:anglický, německý, italský, francouzský, španělský, ruský, polský, maďarský, ukrajinský, chorvatský, portugalský, holandský, čínský a japonský.",
+                    tickets: nil,
+                    ticketsInfo: nil,
+                    image: URL(string: "https://picsum.photos/200"),
+                    url: "https://www.gotobrno.cz/akce/pruvodcovske-sluzby-zakladni-okruhy/",
+                    email: "pecinkova@ticbrno.cz",
+                    ticketsUrl: nil,
+                    timeStampFrom: 1609459200000,
+                    timeStampTo: 2556057600000),
+                geometry:
+                    EventPoint(
+                        latitude: 49.19505099999999,
+                        longitude: 16.608123)
+            )
+        ]
+    )
+}

@@ -6,7 +6,10 @@ struct DevAcademyApp: App {
         WindowGroup {
             RootView()
                 .environmentObject(PlacesObservableObject(
-                    placesService: ProductionPlacesService(), userLocationService: ProductionUserLocationService()))
+                    placesService: ProductionPlacesService(),
+                    userLocationService: ProductionUserLocationService()))
+                .environmentObject(EventsObservableObject(
+                    eventsService: MockEventsService()))
                 .environmentObject(Coordinator())
         }
     }

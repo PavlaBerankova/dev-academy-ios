@@ -55,7 +55,9 @@ extension PlacesMapView {
 struct PlacesMapView_Previews: PreviewProvider {
     static var previews: some View {
         PlacesMapView()
-            .environmentObject(PlacesObservableObject(placesService: ProductionPlacesService(), userLocationService: ProductionUserLocationService()))
+            .environmentObject(PlacesObservableObject(
+                placesService: ProductionPlacesService(),
+                userLocationService: ProductionUserLocationService()))
             .environmentObject(Coordinator())
     }
 }

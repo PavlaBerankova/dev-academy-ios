@@ -14,7 +14,7 @@ struct EventAttributes {
     let ticketsUrl: String?
     let timeStampFrom: Int
     let timeStampTo: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case categories
         case id = "ID"
@@ -31,10 +31,10 @@ struct EventAttributes {
 
 extension EventAttributes {
     var dateFrom: Date {
-        Date(timeIntervalSince1970: TimeInterval(timeStampFrom) / 1000)
+        Date(timeIntervalSince1970: TimeInterval(timeStampFrom) / 1_000)
     }
 
     var dateTo: Date {
-        Date(timeIntervalSince1970: TimeInterval(timeStampTo) / 1000)
+        Date(timeIntervalSince1970: TimeInterval(timeStampTo) / 1_000)
     }
 }

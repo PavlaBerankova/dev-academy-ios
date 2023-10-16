@@ -10,6 +10,7 @@
 		440639732A8CB15000EDB546 /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440639722A8CB15000EDB546 /* PlacesService.swift */; };
 		440F4E4C2ADD19B400496325 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F4E4B2ADD19B400496325 /* ImageView.swift */; };
 		44145C5E2A86880E007D4265 /* SymbolByPlaceKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44145C5D2A86880E007D4265 /* SymbolByPlaceKind.swift */; };
+		441849F12ADD41B80000FC1B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441849F02ADD41B80000FC1B /* Date.swift */; };
 		442593B32AA0883A00FD1058 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442593B22AA0883A00FD1058 /* ImageStorage.swift */; };
 		442F90BF2A95037F005983B6 /* ButtonWithKindInToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442F90BE2A95037F005983B6 /* ButtonWithKindInToolbar.swift */; };
 		4441E2622A9234D0006C9A62 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4441E2612A9234D0006C9A62 /* String.swift */; };
@@ -32,7 +33,7 @@
 		4499C79A2A710712007F6C1C /* PossibleKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4499C7992A710712007F6C1C /* PossibleKind.swift */; };
 		44B4300B2A83DAF9005D9326 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B4300A2A83DAF9005D9326 /* Color.swift */; };
 		44C431922AD13B79006EB111 /* BackgroundForToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C431912AD13B79006EB111 /* BackgroundForToolbar.swift */; };
-		44C649D72A9087DD00A5369F /* PlaceInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C649D62A9087DD00A5369F /* PlaceInfoRow.swift */; };
+		44C649D72A9087DD00A5369F /* RowDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C649D62A9087DD00A5369F /* RowDetailView.swift */; };
 		44C93BCD2A79335A00DD287B /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C93BCC2A79335A00DD287B /* PlaceDetailView.swift */; };
 		44CDD1782A941A6200452808 /* ToolbarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CDD1772A941A6200452808 /* ToolbarButtonView.swift */; };
 		44DA3C332AD3DE8E007E6C87 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DA3C322AD3DE8E007E6C87 /* Event.swift */; };
@@ -59,6 +60,7 @@
 		440639722A8CB15000EDB546 /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
 		440F4E4B2ADD19B400496325 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		44145C5D2A86880E007D4265 /* SymbolByPlaceKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolByPlaceKind.swift; sourceTree = "<group>"; };
+		441849F02ADD41B80000FC1B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		442593B22AA0883A00FD1058 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 		442F90BE2A95037F005983B6 /* ButtonWithKindInToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithKindInToolbar.swift; sourceTree = "<group>"; };
 		4441E2612A9234D0006C9A62 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -80,7 +82,7 @@
 		4499C7992A710712007F6C1C /* PossibleKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleKind.swift; sourceTree = "<group>"; };
 		44B4300A2A83DAF9005D9326 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		44C431912AD13B79006EB111 /* BackgroundForToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundForToolbar.swift; sourceTree = "<group>"; };
-		44C649D62A9087DD00A5369F /* PlaceInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoRow.swift; sourceTree = "<group>"; };
+		44C649D62A9087DD00A5369F /* RowDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowDetailView.swift; sourceTree = "<group>"; };
 		44C93BCC2A79335A00DD287B /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
 		44CDD1772A941A6200452808 /* ToolbarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarButtonView.swift; sourceTree = "<group>"; };
 		44DA3C322AD3DE8E007E6C87 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 				440F4E4B2ADD19B400496325 /* ImageView.swift */,
 			);
 			path = ImageView;
+			sourceTree = "<group>";
+		};
+		441ADE1D2ADD5DBC008BF8C2 /* RowDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				44C649D62A9087DD00A5369F /* RowDetailView.swift */,
+			);
+			path = RowDetailView;
 			sourceTree = "<group>";
 		};
 		442593B12AA0881B00FD1058 /* Persistence */ = {
@@ -235,6 +245,7 @@
 		44AFC1282AA0C59000B3E0EC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				441ADE1D2ADD5DBC008BF8C2 /* RowDetailView */,
 				440F4E4A2ADD198500496325 /* ImageView */,
 				444480A82AD2BF7F004CB3B3 /* MapView */,
 				444480A62AD2BF52004CB3B3 /* Toolbar */,
@@ -247,7 +258,6 @@
 			children = (
 				44C93BCC2A79335A00DD287B /* PlaceDetailView.swift */,
 				445DBDDC2A827D3600B01FAA /* PlaceDetailViewModel.swift */,
-				44C649D62A9087DD00A5369F /* PlaceInfoRow.swift */,
 			);
 			path = PlaceDetail;
 			sourceTree = "<group>";
@@ -260,6 +270,7 @@
 				4441E2612A9234D0006C9A62 /* String.swift */,
 				44880EBB2A998AB000197AA1 /* Int.swift */,
 				44F66E6F2AC0CF4C00912D70 /* Collection.swift */,
+				441849F02ADD41B80000FC1B /* Date.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -501,6 +512,7 @@
 				44DA3C352AD3DE97007E6C87 /* Events.swift in Sources */,
 				4499C7922A71062F007F6C1C /* Place.swift in Sources */,
 				445DBDDF2A8283D800B01FAA /* Coordinator.swift in Sources */,
+				441849F12ADD41B80000FC1B /* Date.swift in Sources */,
 				445DBDDD2A827D3600B01FAA /* PlaceDetailViewModel.swift in Sources */,
 				C056104B2A5C78CA007FB970 /* RootView.swift in Sources */,
 				44B4300B2A83DAF9005D9326 /* Color.swift in Sources */,
@@ -523,7 +535,7 @@
 				44DA3C3D2AD3F867007E6C87 /* EventsService.swift in Sources */,
 				4499C7982A7106FA007F6C1C /* Kind.swift in Sources */,
 				44DA3C402AD3FB6E007E6C87 /* EventsListView.swift in Sources */,
-				44C649D72A9087DD00A5369F /* PlaceInfoRow.swift in Sources */,
+				44C649D72A9087DD00A5369F /* RowDetailView.swift in Sources */,
 				44EA42812A7AE502008DB6C3 /* FavoritePlacesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

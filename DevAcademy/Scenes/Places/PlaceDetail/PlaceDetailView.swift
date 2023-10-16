@@ -104,11 +104,23 @@ extension PlaceDetailView {
 
     private var placeLinks: some View {
         VStack {
-            PlaceInfoRow(header: "Web", link: model.placeWeb, linkPlaceholder: model.webPlaceholder)
-            PlaceInfoRow(header: "Telefon", link: "tel://" + model.placePhone, linkPlaceholder: model.phonePlaceholder)
-            PlaceInfoRow(header: "E-mail", link: "mailto:" + model.placeEmail, linkPlaceholder: model.placeEmail)
+            RowDetailView(
+                header: "Web",
+                link: model.placeWeb,
+                linkPlaceholder: model.webPlaceholder,
+                text: nil)
+            RowDetailView(
+                header: "Telefon",
+                link: "tel://" + model.placePhone,
+                linkPlaceholder: model.phonePlaceholder,
+                text: nil)
+            RowDetailView(header: "E-mail", link: "mailto:" + model.placeEmail, linkPlaceholder: model.placeEmail, text: nil)
             if model.programmeIsAvailable {
-                PlaceInfoRow(header: "Program", link: model.placeProgramme, linkPlaceholder: "přejít na program")
+                RowDetailView(
+                    header: "Program",
+                    link: model.placeProgramme,
+                    linkPlaceholder: "přejít na program",
+                    text: nil)
             }
         }
     }

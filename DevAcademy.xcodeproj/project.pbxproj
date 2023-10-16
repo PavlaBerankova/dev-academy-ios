@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		440639732A8CB15000EDB546 /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440639722A8CB15000EDB546 /* PlacesService.swift */; };
+		440F4E4C2ADD19B400496325 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F4E4B2ADD19B400496325 /* ImageView.swift */; };
 		44145C5E2A86880E007D4265 /* SymbolByPlaceKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44145C5D2A86880E007D4265 /* SymbolByPlaceKind.swift */; };
 		442593B32AA0883A00FD1058 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442593B22AA0883A00FD1058 /* ImageStorage.swift */; };
 		442F90BF2A95037F005983B6 /* ButtonWithKindInToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442F90BE2A95037F005983B6 /* ButtonWithKindInToolbar.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		440639722A8CB15000EDB546 /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
+		440F4E4B2ADD19B400496325 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		44145C5D2A86880E007D4265 /* SymbolByPlaceKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolByPlaceKind.swift; sourceTree = "<group>"; };
 		442593B22AA0883A00FD1058 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 		442F90BE2A95037F005983B6 /* ButtonWithKindInToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithKindInToolbar.swift; sourceTree = "<group>"; };
@@ -114,6 +116,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		440F4E492ADD196C00496325 /* ToolbarButton */ = {
+			isa = PBXGroup;
+			children = (
+				44CDD1772A941A6200452808 /* ToolbarButtonView.swift */,
+			);
+			path = ToolbarButton;
+			sourceTree = "<group>";
+		};
+		440F4E4A2ADD198500496325 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				440F4E4B2ADD19B400496325 /* ImageView.swift */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
 		442593B12AA0881B00FD1058 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +151,7 @@
 		444480A62AD2BF52004CB3B3 /* Toolbar */ = {
 			isa = PBXGroup;
 			children = (
-				44CDD1772A941A6200452808 /* ToolbarButtonView.swift */,
+				440F4E492ADD196C00496325 /* ToolbarButton */,
 				444480A92AD2C3B5004CB3B3 /* FilterBar */,
 				444480A72AD2BF5F004CB3B3 /* SearchBar */,
 			);
@@ -217,6 +235,7 @@
 		44AFC1282AA0C59000B3E0EC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				440F4E4A2ADD198500496325 /* ImageView */,
 				444480A82AD2BF7F004CB3B3 /* MapView */,
 				444480A62AD2BF52004CB3B3 /* Toolbar */,
 			);
@@ -464,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				440639732A8CB15000EDB546 /* PlacesService.swift in Sources */,
+				440F4E4C2ADD19B400496325 /* ImageView.swift in Sources */,
 				44DA3C332AD3DE8E007E6C87 /* Event.swift in Sources */,
 				442593B32AA0883A00FD1058 /* ImageStorage.swift in Sources */,
 				44C93BCD2A79335A00DD287B /* PlaceDetailView.swift in Sources */,

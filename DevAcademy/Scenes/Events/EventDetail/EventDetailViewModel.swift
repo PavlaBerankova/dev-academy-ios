@@ -9,4 +9,8 @@ struct EventDetailViewModel: DynamicProperty {
     init(event: Event) {
         self.event = event
     }
+
+    var eventImage: URL? {
+        event.attributes.image
+    }
 }

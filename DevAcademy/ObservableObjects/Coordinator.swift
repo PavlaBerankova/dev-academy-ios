@@ -22,7 +22,11 @@ final class Coordinator: ObservableObject {
     }
 
     // MARK: - Events scenes
-    var eventsScene: some View {
-        EventsListView()
+        var eventsScene: some View {
+            EventsListView()
+        }
+
+    func eventDetailScene(with event: Event) -> some View {
+        EventDetailView(model: EventDetailViewModel(event: event))
     }
 }

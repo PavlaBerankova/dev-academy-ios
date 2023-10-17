@@ -8,8 +8,25 @@ struct EventsListView: View {
     // MARK: - BODY
     var body: some View {
         NavigationStack {
-            Text("Akce")
-            .navigationTitle("Akce")
+            Group {
+                if model.events.isNotEmpty {
+                    List(model.events, id: \.attributes.id) { event in
+                        NavigationLink {
+                            coordinator.eventDetailScene(with: event)
+                        } label: {
+                            EventsRow(event: event)
+                        }
+                    }
+                } else {
+                    LoadingIndicator()
+                }
+            }
+            .listStyle(.plain)
+            .navigationTitle("Akce v Brně")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+        .task {
+            await model.fetchEventsData()
         }
     }
 }

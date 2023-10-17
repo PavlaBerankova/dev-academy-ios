@@ -50,6 +50,13 @@ struct EventDetailViewModel: DynamicProperty {
         return ""
     }
 
+    var ticketWebIsAvailable: Bool {
+        if eventTicketWeb == "" {
+            return false
+        }
+        return true
+    }
+
     var eventTicketWebPlaceholder: String {
         eventTicketWeb.simpleStringFromUrl()
     }
@@ -57,6 +64,13 @@ struct EventDetailViewModel: DynamicProperty {
     // EMAIL
     var eventEmail: String {
         event.attributes.email?.filteringWhiteSpace() ?? ""
+    }
+
+    var emailIsAvailable: Bool {
+        if eventEmail == "" {
+            return false
+        }
+        return true
     }
 
     // WEB
@@ -68,6 +82,13 @@ struct EventDetailViewModel: DynamicProperty {
         }
     }
 
+    var webIsAvailable: Bool {
+        if eventWeb == "" {
+            return false
+        }
+        return true
+    }
+    
     var eventWebPlaceholder: String {
         eventWeb.simpleStringFromUrl()
     }
@@ -77,5 +98,12 @@ struct EventDetailViewModel: DynamicProperty {
             return eventNotes
         }
         return ""
+    }
+
+    var notesIsAvailable: Bool {
+        if eventNotes == "" {
+            return false
+        }
+        return true
     }
 }

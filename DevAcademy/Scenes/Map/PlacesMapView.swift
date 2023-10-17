@@ -19,7 +19,7 @@ struct PlacesMapView: View {
             }
         }
         .task {
-            await model.fetchData()
+            await model.fetchPlacesData()
         }
         .sheet(item: model.$selectedPlace) { place in
             coordinator.placeDetailScene(with: place)

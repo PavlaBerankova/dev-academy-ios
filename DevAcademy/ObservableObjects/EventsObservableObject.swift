@@ -8,4 +8,14 @@ final class EventsObservableObject: ObservableObject {
     init(eventsService: EventsService) {
         self.eventsService = eventsService
     }
+
+    @MainActor
+    func fetchEventsData() async {
+        do {
+            let resultEvents = try await eventsService.fetchEvents()
+            self.events = resultEvents.events
+        } catch {
+            print(error)
+        }
+    }
 }

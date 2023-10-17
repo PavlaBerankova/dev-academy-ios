@@ -114,7 +114,11 @@ extension PlaceDetailView {
                 link: "tel://" + model.placePhone,
                 linkPlaceholder: model.phonePlaceholder,
                 text: nil)
-            RowDetailView(header: "E-mail", link: "mailto:" + model.placeEmail, linkPlaceholder: model.placeEmail, text: nil)
+            RowDetailView(
+                header: "E-mail",
+                link: "mailto:" + model.placeEmail,
+                linkPlaceholder: model.placeEmail,
+                text: nil)
             if model.programmeIsAvailable {
                 RowDetailView(
                     header: "Program",

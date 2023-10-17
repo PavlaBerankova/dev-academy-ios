@@ -6,4 +6,8 @@ struct EventsViewModel: DynamicProperty {
     var events: [Event] {
         eventsObservableObject.events
     }
+
+    func fetchEventsData() async {
+        await eventsObservableObject.fetchEventsData()
+    }
 }

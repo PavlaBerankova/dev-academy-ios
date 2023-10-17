@@ -18,17 +18,25 @@ struct EventDetailView: View {
                         ScrollView {
                             eventDate
                             eventTickets
-                            eventTicketWeb
-                            eventEmail
-                            eventWeb
-                            eventNotes
+                            if model.ticketWebIsAvailable {
+                                eventTicketWeb
+                            }
+                            if model.emailIsAvailable {
+                                eventEmail
+                            }
+                            if model.webIsAvailable {
+                                eventWeb
+                            }
+                            if model.notesIsAvailable {
+                                eventNotes
+                            }
                         }
                     }
                     .padding(.horizontal)
                 }
                 .ignoresSafeArea(edges: .top)
             }
-            // Spacer()
+            Spacer()
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 navigationToolbarBackButton

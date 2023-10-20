@@ -1,3 +1,4 @@
+import MapKit
 import SwiftUI
 
 struct EventDetailViewModel: DynamicProperty {
@@ -88,10 +89,11 @@ struct EventDetailViewModel: DynamicProperty {
         }
         return true
     }
-    
+
     var eventWebPlaceholder: String {
         eventWeb.simpleStringFromUrl()
     }
+
     // NOTES
     var eventNotes: String {
         if let eventNotes = event.attributes.text {
@@ -105,5 +107,14 @@ struct EventDetailViewModel: DynamicProperty {
             return false
         }
         return true
+    }
+
+    var eventCoordinate: CLLocationCoordinate2D? {
+        if let eventCoordinate = event.geometry?.eventCoordinate {
+            let latitude = eventCoordinate.latitude
+            let longitude = eventCoordinate.longitude
+            return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        }
+        return nil
     }
 }

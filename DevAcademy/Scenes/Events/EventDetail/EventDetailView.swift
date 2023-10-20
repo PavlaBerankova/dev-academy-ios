@@ -1,10 +1,14 @@
 import SwiftUI
+import MapKit
 
 struct EventDetailView: View {
     // MARK: PROPERTIES
     @Environment(\.dismiss)
     private var dismiss
     let model: EventDetailViewModel
+    @State var regionBrno = MKCoordinateRegion(
+        center: CLLocationCoordinate2DMake(BrnoCoordinates.latitude.rawValue, BrnoCoordinates.longitude.rawValue),
+        span: MKCoordinateSpan(latitudeDelta: BrnoCoordinates.coordinateSpan.rawValue, longitudeDelta: BrnoCoordinates.coordinateSpan.rawValue))
 
     // MARK: - BODY
     var body: some View {
@@ -12,27 +16,32 @@ struct EventDetailView: View {
             ZStack {
                 VStack {
                     eventImage
+                    eventTitle
+                        .padding(.bottom, 20)
+                    ScrollView {
                     LazyVStack(alignment: .leading, spacing: 10) {
-                        eventTitle
-                            .padding(.bottom, 20)
-                        ScrollView {
-                            eventDate
-                            eventTickets
-                            if model.ticketWebIsAvailable {
-                                eventTicketWeb
-                            }
-                            if model.emailIsAvailable {
-                                eventEmail
-                            }
-                            if model.webIsAvailable {
-                                eventWeb
-                            }
-                            if model.notesIsAvailable {
-                                eventNotes
-                            }
+                        eventDate
+                        eventTickets
+                        if model.ticketWebIsAvailable {
+                            eventTicketWeb
                         }
+                        if model.emailIsAvailable {
+                            eventEmail
+                        }
+                        if model.webIsAvailable {
+                            eventWeb
+                        }
+                        if model.notesIsAvailable {
+                            eventNotes
+                        }
+                        Map(coordinateRegion: $regionBrno,
+                            showsUserLocation: true)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 400)
+                            .cornerRadius(8)
                     }
                     .padding(.horizontal)
+                }
                 }
                 .ignoresSafeArea(edges: .top)
             }
@@ -61,7 +70,7 @@ extension EventDetailView {
     }
 
     private var eventTitle: some View {
-        VStack(alignment: .leading) {
+        LazyVStack(alignment: .leading) {
             Text(model.eventName)
                 .lineLimit(3)
                 .font(.title3)
@@ -71,6 +80,7 @@ extension EventDetailView {
                 .lineLimit(2)
                 .opacity(0.7)
         }
+        .padding(.horizontal)
         .padding(.top, 15)
     }
         private var eventDate: some View {

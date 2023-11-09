@@ -33,6 +33,5 @@ struct EventsListView: View {
 
 #Preview {
     EventsListView()
-        .environmentObject(EventsObservableObject(eventsService: MockEventsService()))
-        .environmentObject(Coordinator())
+        .inject(objects: ObservableObjects(services: Services()), coordinator: Coordinator())
 }

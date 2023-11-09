@@ -62,7 +62,6 @@ extension PlacesListView {
 struct PlacesView_Previews: PreviewProvider {
     static var previews: some View {
         PlacesListView()
-            .environmentObject(PlacesObservableObject(placesService: ProductionPlacesService(), userLocationService: ProductionUserLocationService()))
-            .environmentObject(Coordinator())
+            .inject(objects: ObservableObjects(services: Services()), coordinator: Coordinator())
     }
 }

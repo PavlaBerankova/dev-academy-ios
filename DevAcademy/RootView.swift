@@ -62,11 +62,6 @@ extension RootView {
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
-            .environmentObject(PlacesObservableObject(
-                placesService: ProductionPlacesService(),
-                userLocationService: ProductionUserLocationService()))
-            .environmentObject(EventsObservableObject(
-                eventsService: MockEventsService()))
-            .environmentObject(Coordinator())
+            .inject(objects: ObservableObjects(services: Services()), coordinator: Coordinator())
     }
 }

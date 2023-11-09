@@ -1,6 +1,10 @@
 import Foundation
 
-struct Event: Identifiable {
+struct Event: Identifiable, Codable, Equatable {
+    static func == (lhs: Event, rhs: Event) -> Bool {
+        lhs.attributes.id == rhs.attributes.id
+    }
+    
     let attributes: EventAttributes
     let geometry: EventPoint?
 

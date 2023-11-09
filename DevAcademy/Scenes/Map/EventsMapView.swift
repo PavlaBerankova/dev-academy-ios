@@ -1,6 +1,7 @@
 import MapKit
 import SwiftUI
 
+// NOTE: FOR TEST - FOR NOW NOT IN USE
 struct EventsMapView: View {
     // MARK: PROPERTIES
     @EnvironmentObject private var coordinator: Coordinator
@@ -16,9 +17,9 @@ struct EventsMapView: View {
         .task {
             await model.fetchEventsData()
         }
-//        .sheet(item: model.$selectedPlace) { place in
-//            coordinator.placeDetailScene(with: place)
-//        }
+        .sheet(item: model.$selectedEvent) { event in
+            coordinator.eventDetailScene(with: event)
+        }
     }
 }
 
@@ -31,12 +32,12 @@ extension EventsMapView {
                 MapAnnotation(
                     coordinate: CLLocationCoordinate2D(latitude: event.geometry?.latitude ?? 0.0, longitude: event.geometry?.longitude ?? 0.0)) {
                             SymbolByPlaceKind(symbol: Image(systemName: "mappin.circle.fill"))
-//                                .scaleEffect(model.selectedPlace == place ? 1 : 0.7)
-//                                .onTapGesture {
-//                                    withAnimation(.easeInOut) {
-//                                        model.selectedPlace = place
-//                                    }
-//                                }
+                                .scaleEffect(model.selectedEvent == event ? 1 : 0.7)
+                                .onTapGesture {
+                                    withAnimation(.easeInOut) {
+                                        model.selectedEvent = event
+                                    }
+                                }
                 }
         }
         .ignoresSafeArea(edges: .top)
@@ -47,6 +48,5 @@ extension EventsMapView {
 
 #Preview {
     EventsMapView()
-        .environmentObject(EventsObservableObject(eventsService: MockEventsService()))
-        .environmentObject(Coordinator())
+        .inject(objects: ObservableObjects(services: Services()), coordinator: Coordinator())
 }

@@ -1,7 +1,7 @@
 import CoreLocation
 import Foundation
 
-struct EventPoint{
+struct EventPoint: Codable {
     let latitude: Double
     let longitude: Double
 

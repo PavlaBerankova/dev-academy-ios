@@ -8,6 +8,7 @@ struct EventsViewModel: DynamicProperty {
         eventsObservableObject.events
     }
 
+    @State var selectedEvent: Event?
     @State var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(
             latitude: BrnoCoordinates.latitude.rawValue,

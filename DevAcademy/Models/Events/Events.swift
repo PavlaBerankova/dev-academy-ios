@@ -1,6 +1,6 @@
 import Foundation
 
-struct Events {
+struct Events: Codable {
     var events: [Event]
 
     enum CodingKeys: String, CodingKey {

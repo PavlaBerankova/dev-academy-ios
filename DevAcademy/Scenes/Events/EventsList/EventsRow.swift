@@ -52,8 +52,8 @@ extension EventsRow {
 
     private var eventTitleWithCategory: some View {
         VStack(alignment: .leading) {
-            Text(event.attributes.name)
-                .font(.title3)
+            Text(event.attributes.name.filterHtmlCharacters())
+                .font(.headline)
                 .fontWeight(.semibold)
                 .lineLimit(4)
 
@@ -61,6 +61,8 @@ extension EventsRow {
                 .font(.footnote)
                 .opacity(0.7)
                 .lineLimit(2)
+            Text("\(event.attributes.dateFrom.dateFormat()) - \(event.attributes.dateTo.dateFormat())")
+                .font(.footnote)
         }
     }
 }

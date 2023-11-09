@@ -50,16 +50,16 @@ struct PlaceDetailViewModel: DynamicProperty {
 
     // PHONE
     var placePhone: String { // place phone return "123456789", "0", "-"
-        place.attributes.phone?.filteringWhiteSpace() ?? "-"
+        place.attributes.phone?.filterWhiteSpace() ?? "-"
     }
 
     var phonePlaceholder: String {
-        formatPhoneNumber(placePhone)
+        placePhone.formatPhoneNumber()
     }
 
     // EMAIL
     var placeEmail: String {
-        place.attributes.email?.filteringWhiteSpace() ?? "-"
+        place.attributes.email?.filterWhiteSpace() ?? "-"
     }
 
     // PROGRAMME
@@ -102,16 +102,16 @@ struct PlaceDetailViewModel: DynamicProperty {
         mapItem.openInMaps(launchOptions: nil)
     }
 
-    private func formatPhoneNumber(_ number: String) -> String {
-        if number == "0" || number == "-" {
-            return "-"
-        } else {
-            let numberToInt = Int(number)
-            let numberFormatter = NumberFormatter()
-            numberFormatter.numberStyle = .decimal
-            numberFormatter.groupingSeparator = " " // --> 123 456 789
-            let formattedNumber = numberFormatter.string(from: NSNumber(value: numberToInt!)) ?? "-"
-            return formattedNumber
-        }
-    }
+//    private func formatPhoneNumber(_ number: String) -> String {
+//        if number == "0" || number == "-" {
+//            return "-"
+//        } else {
+//            let numberToInt = Int(number)
+//            let numberFormatter = NumberFormatter()
+//            numberFormatter.numberStyle = .decimal
+//            numberFormatter.groupingSeparator = " " // --> 123 456 789
+//            let formattedNumber = numberFormatter.string(from: NSNumber(value: numberToInt!)) ?? "-"
+//            return formattedNumber
+//        }
+//    }
 }

@@ -53,7 +53,7 @@ extension PlacesRow {
     private var placeTitleWithType: some View {
         VStack(alignment: .leading) {
             Text(place.attributes.title)
-                .font(.title3)
+                .font(.headline)
                 .fontWeight(.semibold)
                 .lineLimit(3)
 

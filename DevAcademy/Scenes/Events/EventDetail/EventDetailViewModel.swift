@@ -18,7 +18,7 @@ struct EventDetailViewModel: DynamicProperty {
 
     // NAME
     var eventName: String {
-        event.attributes.name
+        event.attributes.name.filterHtmlCharacters()
     }
 
     // CATEGORY
@@ -52,7 +52,7 @@ struct EventDetailViewModel: DynamicProperty {
     }
 
     var ticketWebIsAvailable: Bool {
-        if eventTicketWeb == "" {
+        if eventTicketWeb.isEmpty {
             return false
         }
         return true
@@ -64,11 +64,11 @@ struct EventDetailViewModel: DynamicProperty {
 
     // EMAIL
     var eventEmail: String {
-        event.attributes.email?.filteringWhiteSpace() ?? ""
+        event.attributes.email?.filterWhiteSpace() ?? ""
     }
 
     var emailIsAvailable: Bool {
-        if eventEmail == "" {
+        if eventEmail.isEmpty {
             return false
         }
         return true
@@ -84,7 +84,7 @@ struct EventDetailViewModel: DynamicProperty {
     }
 
     var webIsAvailable: Bool {
-        if eventWeb == "" {
+        if eventWeb.isEmpty {
             return false
         }
         return true
@@ -97,13 +97,13 @@ struct EventDetailViewModel: DynamicProperty {
     // NOTES
     var eventNotes: String {
         if let eventNotes = event.attributes.text {
-            return eventNotes
+            return eventNotes.filterHtmlCharacters()
         }
         return ""
     }
 
     var notesIsAvailable: Bool {
-        if eventNotes == "" {
+        if eventNotes.isEmpty {
             return false
         }
         return true

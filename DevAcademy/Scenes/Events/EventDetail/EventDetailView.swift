@@ -88,7 +88,7 @@ extension EventDetailView {
             header: "Datum konání",
             link: nil,
             linkPlaceholder: nil,
-            text: "\(model.eventDateFrom)\n\(model.eventDateTo)")
+            text: "Od: \(model.eventDateFrom)\nDo: \(model.eventDateTo)")
     }
 
     private var eventTickets: some View {

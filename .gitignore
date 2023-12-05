@@ -68,3 +68,5 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 fastlane/README.md
+DevAcademy/Scenes/Map/PlacesMapView 2.swift
+DevAcademy/Scenes/Favorites/FavoritePlacesView 2.swift
